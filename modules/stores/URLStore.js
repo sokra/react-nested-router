@@ -1,7 +1,7 @@
 var invariant = require('react/lib/invariant');
 var warning = require('react/lib/warning');
 var ExecutionEnvironment = require('react/lib/ExecutionEnvironment');
-var normalizePath = require('../Path').normalize;
+var normalizePath = require('../helpers/Path').normalize;
 
 var CHANGE_EVENTS = {
   hash: 'hashchange',
