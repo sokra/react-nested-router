@@ -1,9 +1,8 @@
 /** @jsx React.DOM */
 var React = require('react');
-var ReactRouter = require('../../modules/main');
-var Router = ReactRouter.Router;
-var Route = ReactRouter.Route;
-var Link = ReactRouter.Link;
+var Router = require('../../modules/main');
+var Route = Router.Route;
+var Link = Router.Link;
 
 var AsyncJSXRoute = {
   routeCache: {},
@@ -61,11 +60,12 @@ var App = React.createClass({
   }
 });
 
-Router(
+var routes = (
   <Route handler={App}>
     <Route name="dashboard" path="dashboard" handler={PreDashboard}>
       <Route name="inbox" path="dashboard/inbox" handler={PreInbox}/>
     </Route>
   </Route>
-).renderComponent(document.body);
+);
 
+React.renderComponent(routes, document.body);
