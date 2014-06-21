@@ -15,6 +15,7 @@ var RouteStore = require('../stores/RouteStore');
 var URLStore = require('../stores/URLStore');
 
 var RESERVED_PROPS = {
+  location: true,
   handler: true,
   name: true,
   path: true,
